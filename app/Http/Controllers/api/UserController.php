@@ -49,6 +49,6 @@ class UserController extends Controller
             return response()->json(['access_token' => $accessToken]);
         }
 
-        return response()->json(StatusResource::make(false), 422);
+        return response()->json(StatusResource::make(false), 404);
     }
 }
