@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use App\Http\Controllers\api\TransactionController;
+use App\Http\Controllers\api\ProductController;
 use App\Http\Controllers\api\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -19,3 +19,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::post('register', [UserController::class, 'register']);
 Route::post('login', [UserController::class, 'login']);
+
+Route::get('products', ProductController::class)->middleware('auth:sanctum');
